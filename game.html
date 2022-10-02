@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>Spooky Mad Libs</title>
+        <link rel="stylesheet" href="colors.css">
+    </head>
+    <style>
+        #jumpscare {position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; cursor: pointer; visibility: hidden;}
+
+    </style>
+    <body id="gamebg">
+        <form action="submit.php" method ="POST">
+            <center>
+                <h1>Spooky Mad Libs</h1>
+            </center>
+            <script>
+
+                var name = prompt("A Fun, Carefree Halloween Night Out Trick-Or-Treating With Your Friends! MadLib Style! What is your name?"); 
+                var month= prompt("Name a Month"); 
+                var place= prompt("Name a Place"); 
+                var adj1= prompt("Name a verb (ing)"); 
+                var costume= prompt("Name a Halloween Costume"); 
+                var mat= prompt("Name a material"); 
+                var feel= prompt("Name a Feeling"); 
+                var food= prompt("Name a food"); 
+                var pet= prompt("A parent’s nickname for their child"); 
+                var verb1= prompt("Verb (ing)"); 
+                var verb2= prompt("Verb (ing)"); 
+                var adj2= prompt("Adjective"); 
+                var drug1= prompt("A feeling when tired"); 
+                var drug2 = prompt("A feeling after a tough workout"); 
+                var drug3 = prompt("A bodily reaction to fear");
+                var friend= prompt("Name of your friend"); 
+                var gf= prompt("Name of your girlfriend"); 
+                var dog= prompt("Name of your dog"); 
+                var enemy= prompt("Name of your arch nemisis");  
+                var reaction= prompt("A reaction"); 
+                var fat= prompt("Something Very Heavy"); 
+                var evil= prompt("text representation of laughter"); 
+                var age= prompt("Age"); 
+                var bitem= prompt("Bad Item"); 
+                var adj3= prompt("adjective for movement"); 
+                var titles= prompt("List of Grand Titles"); 
+                var costume2= prompt("Costume a young girl would wear"); 
+                var taste= prompt("Taste"); 
+                var dead= prompt("The Number of Children that would have to die in your city before you donated to an anti-children death charity"); 
+                var feel5= prompt("feeling"); 
+                var boomer= prompt("A group of people that need to learn something important"); 
+                var place1= prompt("Name a place"); 
+                var place2= prompt("Name a place"); 
+                var holi= prompt("Name a holiday"); 
+                document.writeln("Twas the Thirty-First of ");
+                document.writeln(month);
+                document.writeln(" and all through ");
+                document.writeln(place);
+                document.writeln(", children, small, happy, and dressed in blood-reds and gooy-greens, ");
+                document.writeln(adj1);
+                document.writeln(" through the streets. And there, in a small house of ");
+                document.writeln(mat);
+                document.writeln(", the smallest of all children, ");
+                document.writeln(name);
+                document.writeln(", sat with their best friends in the whole world with utter ");
+                document.writeln(feel);
+                document.writeln(", as they waited to go trick-or-treating, hoping to get some deliciously sweet and colorful ");
+                document.writeln(food);
+                document.writeln(". ");
+                document.writeln(name);
+                document.writeln(" and their friends thus set off, marching through the streets on Halloween night. Behind the children, stood a man and a woman, our hero’s parents. They beamed with the beautiful love seeing their darling ");
+                document.writeln(pet);
+                document.writeln(" leave home for the first time on their own. The kids left the home, ");
+                document.writeln(verb1);
+                document.writeln(" down the street with the carefree love and joy that can only come with youth and innocence. The night was clear with ");
+                document.writeln(adj2);
+                document.writeln(" stars " + verb2 + " in the sky, not a stress in the world. It was perhaps this attitude and environment that gave birth to the horrifying tales of the next few hours. <br> <br> The children continued to " + adj1 + " around the " + place + ", gathering that delicious " + food + " and eating it as they went. Eventually, " + name + " began to feel quite " + drug1 + ", something he had never felt before. Perhaps it was the " + food + ". Later however, his girlfriend, " + gf + " (Just suspend disbelief for a bit :)), fell over, feeling " + drug2 + ". Thats not good! You react with " + reaction + ",though not quite sure about how you feel about the whole situation. Then, suddenly, the world came crashing down, feeling like " + fat + " had fallen down upon him, " + name + " saw his dear dog, " + dog + " began to " + drug3 + ". Darn it! Shouldn’t have fed it that " + food + "! At this point all the children were gathered around, all suffering various ailments. It was then that one man approached. An evil genius, one of the most retched, villanious pieces of " + bitem + " " + name + " had ever laid eyes on. He approached with a " + adj3 + " strut acting like the Queen of England reborn, this " + age + " man walked up to the group and let out a crackling laugh:<br><br>" + evil + "!<br><br>  He than annouced, ‘I am " + enemy + ", " + titles + ". FEAR MY WRATH! Dressed in a tightly fitted " + costume2 + "costume, the villain of our tale continued his oration. You children were so set on getting that deliciously " + taste + " " + food + ", that you missed it had all been laced with a dastardly drug of my own creation! By now, all the children had fallen on the ground, beginning to lose consciousness and slip into that deep, dark sleep, as " + name + "fell to a knee, the last one still looking up at " + enemy + ". With a deep, rasping breath, this final chance, this would-be hero looked to the man standing above him, gathered his strength for a final charge, a final effort, and fell to the ground without another sound. Dead. <br><br>" + evil + evil + evil + "<br><br>The laugh seemed to stretch on for eternity…. <br>" + dead + " children dead. The heartbreak only compouded as the" + feel5 + "shrieks of mothers and father and brothers and sisters joined together to fill the streets around " + place + ".<br><br>Don’t do drugs " + boomer + "! Luckily, the events above were purly fictional, but they could happen anywhere, from " + place1 + " to " + place2 + ". Be safe and have a HAPPY " + holi + "!");
+
+                    function jumpscare() 
+                    {
+                        var jumpscare = document.getElementById("jumpscare");
+                        jumpscare.style.visibility="visible";
+                        var audio = document.getElementById("scream");
+                        audio.play();
+                    }
+            </script>
+            </form>
+            <center>
+            <input type="button" onclick="jumpscare();" value="Create New Story" id="jbutton"/>
+            <a href="homepage.html" target="_self">
+                <img id="jumpscare" src="./jumpscare.jpg" />
+            </a>
+            <audio id="scream" src="./jumpscareAudio.mp3">
+            </center>
+    </body>
+</html>
